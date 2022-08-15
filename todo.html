@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text-uppercase text-center pt-5">To do list</h1>
+    <div class="input-group mb-5">
+      <input type="text" class="form-control" placeholder="Enter That What You Want To DO"
+        aria-label="Recipient's username" aria-describedby="button-addon2" id="input">
+      <button class="btn bg-secondary btn-outline-secondary text-white" type="button" id="btn">Add</button>
+    </div>
+    <table class="table table-striped">
+      <thead>
+        <tr style="width: 100%;">
+          <th style="width: calc(100% / 3);">Number</th>
+          <th style="width: calc(100% / 3);">Discription</th>
+          <th style="width: calc(100% / 3);">Edit</th>
+        </tr>
+      </thead>
+      <tbody id="table-body">
+
+      </tbody>
+    </table>
+    <button class="btn btn-secondary mx-auto" style="width:100%;" id="clear">clear All</button>    
+  </div>
+  <script src="todo.js"></script>
+</body>
+
+</html>
