@@ -5,6 +5,9 @@ document.getElementById('btn').addEventListener('click', function () {
 
     const tableBody = document.getElementById('table-body');
     const trElement = document.createElement('tr');
+    if(trElement.style.display = 'none'){
+        trElement.style.display = 'block';
+    }
     trElement.innerHTML = `
         <th scope="row" class="done">${count}</th>
         <td class="done">${input}</td>
@@ -16,12 +19,6 @@ document.getElementById('btn').addEventListener('click', function () {
     tableBody.appendChild(trElement);
     document.getElementById('input').value = '';
 
-    const deleteAll = document.getElementById('clear');
-    deleteAll.addEventListener('click', function(){
-        // tableBody.style.display
-        tableBody.style.display = 'none';
-    })
-    
     
     const complete = document.getElementsByClassName('complete');
     for (const button of complete) {
@@ -35,7 +32,11 @@ document.getElementById('btn').addEventListener('click', function () {
             event.target.parentNode.parentNode.style.display = 'none';
         })
     }
-    
+    const deleteAll = document.getElementById('clear');
+    deleteAll.addEventListener('click', function(){
+        // tableBody.style.display
+        tableBody.style.display = 'none';
+    })
     
     
 })
